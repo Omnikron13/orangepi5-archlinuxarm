@@ -424,7 +424,7 @@ UUID=${uuid_boot_specifier}	/boot	vfat	rw,noatime	0 2" >>  cache/root/etc/fstab
     # Things that need to done inside the root
     chroot cache/root /bin/bash -ec "locale-gen
 systemctl enable systemd-{network,resolve,timesync}d usb2host sshd
-useradd --groups wheel --create-home --password '"'$y$j9T$raNZsZE8wMTuGo2FHnYBK/$0Z0OEtF62U.wONdo.nyd/GodMLEh62kTdZXeb10.yT7'"' alarm"
+useradd --groups wheel --create-home --password '"'$6$2H4bhYzC5SlcKgpW$Qpl/1fng.5lFWuaImg0A4YhjA7Q.U3AqKniHuLddWCau76BBlSTeuYRInRYDQps5IXZmEwVjMa9fe2/JDsKvM1'"' joey"
 }
 
 archive_root() {
