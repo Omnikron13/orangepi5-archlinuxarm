@@ -423,7 +423,7 @@ UUID=${uuid_boot_specifier}	/boot	vfat	rw,noatime	0 2" >>  cache/root/etc/fstab
 
     # Things that need to done inside the root
     chroot cache/root /bin/bash -ec "locale-gen
-systemctl enable systemd-{network,resolve,timesync}d usb2host sshd
+systemctl enable systemd-{network,resolve,timesync}d sshd
 useradd --groups wheel --create-home --password '"'$6$2H4bhYzC5SlcKgpW$Qpl/1fng.5lFWuaImg0A4YhjA7Q.U3AqKniHuLddWCau76BBlSTeuYRInRYDQps5IXZmEwVjMa9fe2/JDsKvM1'"' joey"
 }
 
@@ -746,7 +746,7 @@ if [[ "${#install_pkgs_bootstrap[@]}" == 0 ]]; then
 fi
     
 if [[ "${#install_pkgs_normal[@]}" == 0 ]]; then
-    install_pkgs_normal=(vim nano sudo openssh linux-firmware-orangepi-git usb2host)
+    install_pkgs_normal=(neovim sudo openssh linux-firmware-orangepi-git)
 fi
 
 if [[ "${#install_pkgs_kernel[@]}" == 0 ]]; then
